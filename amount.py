@@ -6,4 +6,4 @@ class Amount:
         self.transaction_type = transaction_type
 
     def __str__(self):
-        print(f'The amount in your bank account is {self.amount}')
+        return (f'{self.transaction_type}: {self.amount} som.')
