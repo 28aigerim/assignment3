@@ -3,9 +3,11 @@ import datetime
 
 class PersonalAccount:
 
-    def __init__(self, __account_number, __account_holder, __balance =0, transactions=[]):
-        #self.__account_number = account_number
-        #self.__account_holder = account_holder
+    def __init__(self, __account_number, __account_holder, __balance =0, transactions=None):
+        if transactions is None:
+            transactions = []
+        self.__account_number = account_number
+        self.__account_holder = account_holder
         self.__balance = 0
         self.transactions = []
 
@@ -41,7 +43,7 @@ class PersonalAccount:
         self.account_holder = input('Enter the new account holder: ')
 
     def __str__(self):
-        return f'Personal account {self.account_number} is holded by {self.account_holder}. The current balance is {self.balance}.'
+        return f'Personal account {self.account_number} is held by {self.account_holder}. The current balance is {self.balance}.'
 
     def __add__(self, amount):
         deposit1 = Amount(amount, datetime.datetime.now, 'DEPOSIT')
