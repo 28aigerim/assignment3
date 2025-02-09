@@ -1,0 +1,34 @@
+Sample Test with User Inputs
+1. Depositing money into the account
+  Code:
+    pers_acc1 = PersonalAccount(123, "AFSH")
+    pers_acc1.deposit(400)
+
+  Output:
+  Personal account 123 is held by AFSH. The current balance is 400.
+
+2. Withdrawing money from the account.
+  Code:
+    pers_acc1.withdraw(200)
+    print(pers_acc1)
+
+  Output:
+  Personal account 123 is held by AFSH. The current balance is 200.
+
+3. Checking the balance.
+  Code:
+    pers_acc1.get_balance()
+
+  Output:
+  The current balance is 200.
+
+4. Printing the transaction history.
+  Code:
+    pers_acc1.print_transaction_history()
+    print(pers_acc1)
+
+  Output:
+  Transaction history:
+  DEPOSIT: 400 som
+
+  WITHDRAWAL: 200 som
